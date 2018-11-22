@@ -58,7 +58,7 @@ func (ln *GracefulListener) Close() error {
 	err := ln.ln.Close()
 
 	if err != nil {
-		return nil
+		return err
 	}
 
 	return ln.waitForZeroConns()
